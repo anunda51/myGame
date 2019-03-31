@@ -1,0 +1,83 @@
+/*---------- home ---------- */
+.row-home{
+    display: flex;
+    margin-bottom: 3.5%;
+}
+
+/*---------- chooselevel ---------- */
+.row-chooseLevel{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+/*---------- home , chooselevel ---------- */
+.col{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/*---------- playingAll ---------- */
+.row-playing{
+    display: flex;
+}
+
+.container-playing-top{
+    margin-bottom: 1rem;
+}
+
+.container-playing-middle{
+    margin-top: 6rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+.container-playing-bottom{
+    margin-top: 6rem;
+    margin-left: 12rem;
+    margin-right: 12rem;
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+
+.col-playing-backBtn{
+    padding: 10px;
+    width: 33.333%;
+    text-align: left;
+}
+
+.col-playing-level{
+    width: 33.333%;
+    text-align: center;
+}
+
+.col-playing-score{
+    padding: 10px;
+    width: 100%;
+    /* margin-left: 23%;
+    /* margin-right: 20%; */ 
+    text-align: right;
+}
+
+.col-playing-time{
+    padding: 10px;
+    width: 33.333%;
+    text-align: right;
+}
+
+.bg{
+    background-image:url("./img/bg1.jpg");
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    /* padding:10rem; */
+}

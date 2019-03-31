@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Bungee+Shade|Vast+Shadow" rel="stylesheet">
+    <title>Playing</title>
+</head>
+
+<body onload="startGame()">
+    <audio id="audio" src="./sound/button-3.mp3" autoplay="false" preload="auto"></audio>
+    <div class="bg" style="font-family: 'Bungee Shade', cursive;">
+        <div class="container-playing-top">
+            <div class="row-playing">
+                <div class="col-playing-backBtn">
+                    <a href="chooselevel_cal.html">
+                        <button class="button"
+                            style="font-size:28px; width: 30%; height: 70px; background-color:white;font-family: 'Vast Shadow', cursive;border: 8px solid rgb(67, 17, 245);">BACK</button>
+                    </a>
+                </div>
+                <div class="col-playing-level">
+                    <label style="font-size:45px;"><b><label id="showLevel"></label> / 5</b></label>
+                </div>
+                <div class="col-playing-time">
+                    <label style="font-size:45px;"><b>TIME : <label id="countdown"></label></b></label>
+                </div>
+            </div>
+
+            <div class="row-playing">
+                <div class="col-playing-score">
+                    <label style="font-size:45px;"><b>SCORE : <label id="showScore"></label></b></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-playing-middle" style="font-family: 'Vast Shadow', cursive;">
+            <div class="row-playing">
+                <div class="col" style="font-size:70px; color: red;">
+                    <label id="num1"><b>NUM1</b></label>
+                </div>
+                <div class="col" style="font-size:70px; color: red;">
+                    <label id="operator">+</label>
+                </div>
+                <div class="col" style="font-size:70px; color: red;">
+                    <label id="num2">NUM2</label>
+                </div>
+                <div class="col" style="font-size:70px; color: red;">
+                    <label id="operator1">-</label>
+                </div>
+                <div class="col" style="font-size:70px; color: red;">
+                    <label id="num3">NUM3</label>
+                </div>
+                <div class="col" style="font-size:70px; color: red;">
+                    <label>=</label>
+                </div>
+                <div class="col" style="padding-top:1rem;">
+                    <input id="answer" type="text" value="" ondrop="dropChoice()" onchange="lock()"
+                        style="border:5px solid blue; font-size:20px; height:90px; font-size: 50px; width: 180%; text-align: center; font-family: 'Vast Shadow', cursive;" readonly>
+                </div>
+            </div>
+            <div class="row-playing">
+                <div class="col">
+                    <button class="button" onclick="checkAnswer()"
+                        style="background-color:rgb(94, 255, 129); border: 8px solid rgba(21, 255, 0, 0.74); color:blue;font-size:30px; width: 50%; height: 70px; font-family: 'Vast Shadow', cursive;">CHECK</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-playing-bottom">
+            <div class="row-playing">
+                <div class="col">
+                    <button class="button is-rounded" id="choice1" onmousedown="clickChoice()"
+                        style="font-size:40px; width: 100%; height: 100px;font-family: 'Vast Shadow', cursive; border: 8px solid rgb(217, 253, 9);"
+                        draggable="true">CHOICE1</button>
+                </div>
+                <div class="col">
+                    <button class="button is-rounded" id="choice2" onmousedown="clickChoice()"
+                        style="font-size:40px; width: 100%; height: 100px;font-family: 'Vast Shadow', cursive; border: 8px solid rgb(217, 253, 9);"
+                        draggable="true">CHOICE2</button>
+                </div>
+                <div class="col">
+                    <button class="button is-rounded" id="choice3" onmousedown="clickChoice()"
+                        style="font-size:40px; width: 100%; height: 100px;font-family: 'Vast Shadow', cursive; border: 8px solid rgb(217, 253, 9);"
+                        draggable="true">CHOICE3</button>
+                </div>
+                <div class="col">
+                    <button class="button is-rounded" id="choice4" onmousedown="clickChoice()"
+                        style="font-size:40px; width: 100%; height: 100px;font-family: 'Vast Shadow', cursive; border: 8px solid rgb(217, 253, 9);"
+                        draggable="true">CHOICE4</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="scriptHard.js"></script>
+
+</html>

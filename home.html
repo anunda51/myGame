@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Bungee+Shade|Vast+Shadow" rel="stylesheet">
+    <title>Home</title>
+</head>
+
+<body>
+    <audio id="audio" src="./sound/button-3.mp3" autoplay="false" preload="auto"></audio>
+    <div class="bg" style="padding:5rem;">
+        <div class="row-home">
+            <div class="col">
+                <label style="font-size:100px; font-family: 'Bungee Shade', cursive;"><b>MATH FOR KIDS</b></label>
+            </div>
+        </div>
+
+        <div class="row-home">
+            <div class="col">
+                <a href="chooselevel_cal.html">
+                    <button class="button"
+                        style="background-color:rgb(252, 132, 152);font-size:30px; width:35%; height: 80px; font-family: 'Vast Shadow', cursive; border: 8px solid red;"><b>CALCULATE</b></button>
+                </a>
+            </div>
+        </div>
+
+        <div class="row-home">
+            <div class="col">
+                <label>
+                    <button class="button"
+                        style="background-color:rgb(252, 132, 152);font-size:30px; width:35%; height: 80px; font-family: 'Vast Shadow', cursive; border: 8px solid red;"><b>MEMORY
+                            MATH</b></button>
+                </label>
+            </div>
+        </div>
+
+        <div class="row-home">
+            <div class="col">
+                <label id="sound" style="font-size:40px; font-family: 'Vast Shadow', cursive;" onclick="changeSound()">
+                    SOUND : OFF
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var bleep = new Audio();
+    bleep.src = './sound/button-3.mp3';
+
+    function changeSound() {
+        bleep.play();
+        var text;
+        var sound = document.getElementById('sound');
+        if (sound.innerHTML === "SOUND : OFF") {
+            sound.innerHTML = "SOUND : ON";
+        } else {
+            sound.innerHTML = "SOUND : OFF";
+        }
+    }
+</script>
+
+</html>
